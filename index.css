@@ -79,6 +79,8 @@
     align-items: center;
     padding-top: 20px;
     border-bottom: 0.1px solid gray; 
+    align-items: center;
+    
    
 }
 
@@ -270,11 +272,31 @@ margin-top: 10px;
     .footer{
         grid-template-columns: repeat(2,auto);
     }
+    .menu:hover + .right{
+        display: flex;
+        flex-flow: column wrap;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: calc(100vh - 80px);
+        justify-content: flex-start;
+        align-items: stretch;
+        background-color: rgb(236, 221, 200);
+        padding-top: 20px;
+        
+
+    }
     .right{
         display: none;
     }
     .menu{
         display: block;
+        cursor: pointer;
+    }
+    .right > div{
+        align-items: stretch;
+        justify-content: space-evenly;
     }
 }
 @media (max-width: 600px)
